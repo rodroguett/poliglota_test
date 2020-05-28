@@ -7,6 +7,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Professor</th>
+      <th>First session</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td><%= course.name %></td>
         <td><%= course.description %></td>
         <td><%= course.professor.name %></td>
+        <td><%= course.first_session.to_s(:session_format) %></td>
         <td><%= link_to 'Show', course, class: "btn btn-dark" %></td>
         <td><%= link_to 'Edit', edit_course_path(course), class: "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'You will delete all the sessions of this course. Are you sure?' }, class: "btn btn-danger" %></td>

@@ -7,7 +7,8 @@
     <%= f.input :description %>
     <%= f.association :professor %>
 
-    <%= f.input :first_session, as: :date, html5: true %>
+    <%= f.input :first_session, as: :date, hint: "Only can be chosen a day between monday and thursday", html5: true, min: "29/05/2020" %>
+
   </div>
 
   <div class="form-actions">

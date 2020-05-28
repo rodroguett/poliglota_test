@@ -1,5 +1,10 @@
 class Course < ApplicationRecord
 
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :professor_id, presence: true
+  validates :first_session, presence: true
+
   NUMBER_OF_SESSIONS = 8
 
   belongs_to :professor
