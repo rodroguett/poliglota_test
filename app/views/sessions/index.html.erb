@@ -1,0 +1,23 @@
+<h1>Sessions</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Date</th>
+      <th>Course</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.number + 1 %></td>
+        <td><%= session.date.to_s(:session_format) %></td>
+        <td><%= session.course.name %></td>
+        <td><%= link_to 'Show', session, class: "btn btn-dark" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:session_format] = '%A %d of %B of %Y'

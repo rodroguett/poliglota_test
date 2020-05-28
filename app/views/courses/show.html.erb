@@ -1,0 +1,44 @@
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @course.professor.name %>
+</p>
+
+<p>
+  <strong>First session:</strong>
+  <%= @course.first_session %>
+</p>
+
+
+<p>
+  <strong>Sessions</strong>
+</p>
+
+<table class="table table-striped table-bordered table-hover">
+  <tr>
+    <td>Number</td>
+    <td>Date</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @course.sessions.each do |session| %>
+  <tr>
+    <td><%= session.number + 1 %></td>
+    <td><%= session.date.to_s(:session_format) %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </p>
+</table>
+
+<%= link_to 'Edit', edit_course_path(@course), class: "btn btn-primary" %>
+<%= link_to 'Back', courses_path, class: "btn btn-secondary" %>

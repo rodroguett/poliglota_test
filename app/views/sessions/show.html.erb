@@ -1,0 +1,16 @@
+<p>
+  <strong>Number:</strong>
+  <%= @session.number %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @session.date.to_s(:session_format) %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @session.course.name %>
+</p>
+
+<%= link_to 'Back', sessions_path, class: "btn btn-secondary" %>
